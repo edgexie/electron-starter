@@ -91,4 +91,6 @@ typings/
 # Electron-Forge
 out/
 
-UI/dist
+static/dist
+public/dist
+html/dist
