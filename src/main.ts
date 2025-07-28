@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
-import { serverRun } from './express-server';
+// import { serverRun } from './express-server';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
@@ -48,8 +48,8 @@ const createWindow = (url?: string) => {
 // Some APIs can only be used after this event occurs.
 app.on('ready', async () => {
   ipcMain.handle('ping', () => 'pong'); // 接收器
-  const url = await serverRun();
-  createWindow(url);
+  // const url = await serverRun();
+  createWindow();
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
