@@ -5,7 +5,8 @@ const port = 3000;
 
 const pathed = MAIN_WINDOW_VITE_DEV_SERVER_URL
   ? path.join(__dirname, `/dist`)
-  : path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/dist`);
+  : path.join(process.resourcesPath, 'public', 'dist');
+console.log('pathed', pathed);
 staticApp.use(express.static(pathed));
 
 export async function serverRun(): Promise<string> {

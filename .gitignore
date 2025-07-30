@@ -94,3 +94,5 @@ out/
 static/dist
 public/dist
 html/dist
+
+app

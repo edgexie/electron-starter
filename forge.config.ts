@@ -6,11 +6,16 @@ import { MakerRpm } from '@electron-forge/maker-rpm';
 import { VitePlugin } from '@electron-forge/plugin-vite';
 import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
-
+import path from 'node:path';
 const config: ForgeConfig = {
   packagerConfig: {
+    name: 'xgcs',
     asar: true,
-    icon: 'src/assets/icon',
+    icon: './src/assets/atg',
+    extraResource: [
+      path.resolve(__dirname, 'public'), // 将 html 目录复制到最终构建目录
+      path.resolve(__dirname, 'app'),
+    ],
   },
   rebuildConfig: {},
   makers: [

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>ATG 地面站更新进程</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <p>
+      <span> 当前版本 </span>
+      <span id="currentVersion"> </span>
+    </p>
+    <p>
+      <span> 最新版本 </span>
+      <span id="lastVersion"> </span>
+    </p>
+    <p><button id="updateBtn">更新</button> <span id="progress-bar"></span></p>
+    <p id="info"></p>
+  </body>
+  <script src="./renderer.ts" type="module"></script>
+</html>
